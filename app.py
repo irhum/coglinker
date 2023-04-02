@@ -17,11 +17,13 @@ st.set_page_config(layout="wide")
 cols = st.columns([3, 1])
 
 with cols[0]:
-    query = st.text_input("What's your question?")
+    st.markdown("### Query")
+    query = st.text_input("")
 
 with cols[1]:
-    st.markdown("Papers to use for retrieval")
+    st.markdown("##### Papers to use for retrieval")
     center_id = st.text_input("arXiv ID for center paper", "2203.11618")
+    st.markdown("##### Other papers to add")
     df = pd.DataFrame([{"arXiv ID": f"{center_id}", "activated": True}])
     edited_df = st.experimental_data_editor(df, num_rows="dynamic")
 
@@ -97,10 +99,10 @@ if query != "":
     with cols[0]:
         st.markdown(f"### Expanded Question:\n\n{refined_q}")
 
-    # Generate and display answer
-    st.markdown(
-        f"### Answer:\n\n{ans_chain.run(abstract=abstract, question=refined_q, retr_passages=retr_passages_str)}"
-    )
+        # Generate and display answer
+        st.markdown(
+            f"### Answer:\n\n{ans_chain.run(abstract=abstract, question=refined_q, retr_passages=retr_passages_str)}"
+        )
     
     # Display retrieved passages
     with st.expander("See retrieved passages"):
