@@ -37,7 +37,7 @@ ans_chain = chains.synthesis_chain(api_key)
 # Download JSON for paper
 @st.cache_data(persist=True)
 def download_json(idx):
-    _ = request.urlretrieve(f"https://arxiv.org/e-print/{idx}", f"{idx}.gz")
+    _ = request.urlretrieve(f"https://export.arxiv.org/e-print/{idx}", f"{idx}.gz")
     process_tex.process_tex_file(f"{idx}.gz", output_dir="output")
     with open(f"output/{idx}.json") as f:
         data = json.load(f)

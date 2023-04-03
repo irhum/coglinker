@@ -6,7 +6,7 @@ This is a (really) early set of experiments on how LLMs can be used to build too
 ## Demo
 ![Coglinker Demo](LINK)
 
-Here's a Colab version of this you can have up and running in ~2 minutes: [Coglinker Demo](LINK)
+Here's a Colab version of this you can have up and running in ~2 minutes: [Colab](https://colab.research.google.com/github/irhum/coglinker/blob/main/interactive.ipynb)
 
 ## How it works
 In its current implementation, coglinker:
