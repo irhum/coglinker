@@ -4,7 +4,7 @@ What if you could ask an arXiv preprint questions directly?
 This is a (really) early set of experiments on how LLMs can be used to build tools that help people understand research papers faster (as opposed to just directly reading a PDF). 
 
 ## Demo
-![Coglinker Demo](LINK)
+![Coglinker Demo](https://github.com/irhum/coglinker/blob/media/output.gif)
 
 Here's a Colab version of this you can have up and running in ~2 minutes: [Colab](https://colab.research.google.com/github/irhum/coglinker/blob/main/interactive.ipynb)
 
