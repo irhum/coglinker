@@ -104,10 +104,10 @@ if query != "":
             f"### Answer:\n\n{ans_chain.run(abstract=abstract, question=refined_q, retr_passages=retr_passages_str)}"
         )
     
-    # Display retrieved passages
-    with st.expander("See retrieved passages"):
-        cols = st.columns(3)
+        # Display retrieved passages
+        with st.expander("See retrieved passages"):
+            cols = st.columns(3)
 
-        for col, passage in zip(cols, retr_passages):
-            with col:
-                st.markdown(passage)
+            for col, passage in zip(cols, retr_passages):
+                with col:
+                    st.markdown(passage)
